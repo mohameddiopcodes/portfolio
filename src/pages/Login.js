@@ -21,7 +21,7 @@ export default function Login({ owner, setOwner }) {
             const user = createJWT(await login({email: formData.email, password: formData.password}))
             setOwner(user)
             persistUser(user)
-            navigate('/#about')
+            navigate('/')
         } catch(e) {
             setError(e.message)
         }

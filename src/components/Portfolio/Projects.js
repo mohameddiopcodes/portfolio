@@ -13,7 +13,7 @@ export default function Projects() {
 
     return (
         <div className='Portfolio'>
-            <Link className='arrow-left' to='/#about'>{'</'} previous</Link>
+            <Link className='arrow-left' to='/'>{'</'} previous</Link>
             <div styles={{overflow: 'visible'}}>
                 <h1>Projects</h1>
                 {project && 
