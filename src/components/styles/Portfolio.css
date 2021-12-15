@@ -1,0 +1,139 @@
+.Portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%
+}
+
+.Portfolio a {
+    font-size: 17px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    position: absolute;
+}
+
+.Portfolio > div{
+    text-align: left;
+    width: 90%;
+    height: 65%;
+}
+
+.arrow-left {
+    bottom: 10%;
+    left: 0
+}
+
+.arrow-right {
+    bottom: 10%;
+    right: 10%
+}
+
+.About {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: visible
+}
+
+.About > img {
+    border-radius: 50%;
+    max-width: 400px;
+    max-height: 400px
+}
+
+.About > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2% 10% 0 0;
+    width: 50%;
+    overflow: visible
+}
+
+.About h1 {
+    font-size: 20px;
+    overflow: visible;
+}
+
+.About p {
+    overflow: visible;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    background: transparent;
+    overflow: visible
+}
+
+.actions button {
+    border: 0;
+    border-radius: 5px;
+    background: #111;
+    color: #fefefe;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    border: 1px solid transparent;
+    padding: 1em;
+    overflow: visible
+}
+
+.actions button:hover {
+    background: #F9F8FD;
+    border: 1px solid #555;
+    color: #555
+}
+
+button img {
+    width: 100%;
+    height: 100%
+}
+
+span.off {
+    color: #777
+}
+
+.skills {
+    overflow: visible
+}
+
+.skills img {
+    overflow: visible;
+    width: 30%;
+    height: 30%
+}
+
+.skills img:nth-child(n + 2) {
+    width: 15%;
+    height: 15%
+}
+
+.skills img:nth-child(n + 4) {
+    width: 8%;
+    height: 8%
+}
+
+.skills img:nth-child(n + 6) {
+    width: 6%;
+    height: 6%
+}
+
+@media only screen and (max-width: 900px) {
+    .About {
+        flex-direction: column-reverse;
+    }
+
+    .About > img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .About > div {
+        width: 100%
+    }
+}

@@ -27,7 +27,7 @@ function App() {
             <>
               <Route path='/' element={ <Portfolio/> } ></Route>
               <Route path='/projects/:id' element={ <Project/> } ></Route>
-              <Route path='/owner' element={ <Login owner={owner} setOwner={setOwner} /> } ></Route>
+              <Route path='/admin' element={ <Login owner={owner} setOwner={setOwner} /> } ></Route>
             </>
         }
       </Routes>

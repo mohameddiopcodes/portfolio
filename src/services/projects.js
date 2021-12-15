@@ -6,7 +6,7 @@ export function create(body) {
     return sendRequest(BASE_URL, 'POST', body)
 }
 
-export function index(query) {
+export function index(query = '') {
     return sendRequest(BASE_URL + query)
 }
 

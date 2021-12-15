@@ -1,15 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Nunito:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  overflow: hidden
+}
+
+body, html {
+    font-family: 'Nunito', sans-serif
+}
+
+button {
+  cursor: pointer;
+}
+
 .App {
   text-align: center;
   display: flex;
   margin: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 main {
+  margin: 0;
   flex-grow: 1;
-  background-color: #282c34;;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  background-color: #F9F8FD;
 }
 
 .App-logo {
@@ -24,7 +43,7 @@ main {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #F9F8FD;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,5 +67,78 @@ main {
 }
 
 form {
-  
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+/* form div:first-child {
+  margin: 0;
+  background: url('./images/profile.PNG');
+} */
+
+form div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form div h1, form div p {
+  width: 80%;
+  margin: .2em;
+  font-weight: 600;
+  text-align: left;
+}
+
+form div p {
+  margin-bottom: 1.5em;
+  color: #555;
+}
+
+form div a {
+  color: #333;
+  display: block;
+  text-align: left;
+  width: 75%;
+}
+
+input:not(input[type=submit]), select {
+  border: 0;
+  margin: 1em;
+  padding: 1.5em;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: transparent;
+  width: 80%;
+}
+
+input[type=submit] {
+  margin: 4em;
+  padding: 1.5em;
+  border-radius: 5px;
+  background: #42adef;
+  width: 80%;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  border: 0
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0,  .2) inset;
+}
+
+@media (hover: hover) {
+  input[type=submit]:hover {
+    background: #3094d2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  }
 }

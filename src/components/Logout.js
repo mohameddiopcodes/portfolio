@@ -7,7 +7,7 @@ export default function Logout({ setOwner }) {
     function handleLogout() {
         logout()
         setOwner(null)
-        navigate('/')
+        navigate('/#about')
     }
 
     return <button onClick={handleLogout} >Log Out</button>

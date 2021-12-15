@@ -16,6 +16,10 @@ const projectSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    image: [{
+        type: String,
+        required: true
+    }],
     technologies: [{
         type: String,
         enum: technologies,

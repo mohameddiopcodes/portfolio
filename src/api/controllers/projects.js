@@ -20,8 +20,8 @@ async function create(req, res) {
 async function index(req, res) {
     try {
         const { page = 1 } = req.query
-        const projects = await Project.find({}).limit(3).skip((page - 1) * 3)
-        res.json({...projects, isLastPage: page*3 >= Project.countDocuments({})})
+        const projects = await Project.find({}).limit(1).skip((page - 1))
+        res.json({ projects, totalPages: Project.countDocuments({})})
     } catch(e) {
         res.json({ message: e.message })
     }

@@ -6,7 +6,7 @@ export default async function(url, method = 'GET', body = null) {
         body: (body && JSON.stringify(body)) || null
     }
 
-    const res = await fetch(url, options)
+    const res = method === 'GET' ? await fetch(url) : await fetch(url, options)
     if(!res.ok) throw new Error((await res.json()).message)
     return res.json()
 }

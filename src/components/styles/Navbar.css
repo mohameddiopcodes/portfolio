@@ -4,13 +4,58 @@ nav {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #282c34;
-    padding: 3%
+    background-color: #F9F8FD;
+    position: relative;
+    padding: 3%;
+    width: 200px
 }
 
-nav a {
-    color: #fefefe;
+nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav div:not(.links) {
+    position: absolute;
+    top: 2em
+}
+
+nav div a {
+    color: #555;
     text-decoration: none;
+}
+
+nav button {
+    padding: .5em 1em;
+    background: #F9F8FD;
+    border: 2px solid #555;
+    border-radius: 5px;
+}
+
+
+.links a {
+    box-sizing: content-box;
     display: block;
-    margin: 50%
+    width: 7px;
+    height: 7px;
+    background: #333;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 1em 0;
+    transition: all .4s ease-in-out .1s;
+}
+
+@media (hover: hover) {
+    .links a:hover {
+        width: 13px;
+        height: 13px;
+    }
+
+    nav button:hover {
+        background: #333;
+        border: 2px solid #333;
+        color: #fefefe
+    }
 }

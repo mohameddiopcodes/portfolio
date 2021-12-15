@@ -1,26 +1,18 @@
-import logo from '../logo.svg'
+import './styles/Portfolio.css'
+import { useLocation } from 'react-router-dom'
+
+import About from '../components/Portfolio/About'
+import Projects from '../components/Portfolio/Projects'
+import Work from '../components/Portfolio/Work'
 
 export default function Portfolio({owner}) {
+  const location = useLocation()
+
     return (
-        <main>
-          {owner ?
-            <div></div>
-            :
-            <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <p>
-                Edit <code>src/App.js</code> and save to reload.
-              </p>
-              <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn React
-              </a>
-            </header>
-          }
+      <main>
+        { location.hash === '#about' && <About /> }
+        { location.hash === '#projects' && <Projects /> }
+        { location.hash === '#work' && <Work /> }
       </main>
     )
 }
