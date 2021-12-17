@@ -7,6 +7,7 @@ export default function Work() {
             <Link className='arrow-left' to='/#projects'>{'</'} previous</Link>
             <div>
                 <h1>Work</h1>
+                <p>Coming soon...</p>
             </div>
         </div>
     )

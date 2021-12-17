@@ -24,6 +24,8 @@ const workSchema = mongoose.Schema({
         type: Number,
         default: 0
     }
+}, {
+    timestamps: true
 })
 
 module.exports = mongoose.model('Work', workSchema)

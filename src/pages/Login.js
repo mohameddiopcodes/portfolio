@@ -18,9 +18,10 @@ export default function Login({ owner, setOwner }) {
     async function handleSubmit(e) {
         e.preventDefault()
         try {
-            const user = createJWT(await login({email: formData.email, password: formData.password}))
+            const user = await login({email: formData.email, password: formData.password})
+            const token = createJWT(user)
             setOwner(user)
-            persistUser(user)
+            persistUser(token)
             navigate('/')
         } catch(e) {
             setError(e.message)
@@ -30,11 +31,11 @@ export default function Login({ owner, setOwner }) {
     return (
         <main>
             {error && <p>{error}</p>}
-            <form onSubmit={handleSubmit} autoComplete="off">
-                <div>
+            <form className='Login' onSubmit={handleSubmit} autoComplete="off">
+                <div class='Login-image'>
 
                 </div>
-                <div>
+                <div class='Login-form'>
                     <h1>Login</h1>
                     <p>this an admin portal, you shouldn't be here if you're not the owner</p>
                     <input placeholder='xyz@email.com' type='text' name='email' onChange={handleOnChange} required />

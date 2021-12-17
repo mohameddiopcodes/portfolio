@@ -13,7 +13,7 @@ export default function Navbar({ owner, setOwner }) {
 
     return (
         <nav>
-            <div>
+            <div className='nav-top'>
                 <Link to='/'><h1>M/D</h1></Link>
                 { owner && <Logout setOwner={setOwner} /> }
             </div>

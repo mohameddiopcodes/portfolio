@@ -10,8 +10,8 @@ export default function Portfolio({owner}) {
 
     return (
       <main>
-        { location.hash === '#about' || location.hash === '' && <About /> }
-        { location.hash === '#projects' && <Projects /> }
+        { (location.hash === '#about' || location.hash === '') && <About /> }
+        { location.hash === '#projects' && <Projects owner={ owner } /> }
         { location.hash === '#work' && <Work /> }
       </main>
     )

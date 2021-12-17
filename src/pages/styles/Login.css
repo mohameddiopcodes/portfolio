@@ -1,0 +1,62 @@
+.Login {
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  }
+  
+  .Login div:first-child {
+    margin: 0;
+    background: url('../../images/profile.PNG');
+  }
+  
+  .Login div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Login div h1, .Login div p {
+    width: 80%;
+    margin: .2em;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .Login div p {
+    margin-bottom: 1.5em;
+    color: #555;
+  }
+  
+  .Login div a {
+    color: #333;
+    display: block;
+    text-align: left;
+    width: 75%;
+  }
+  
+  input:not(input[type=submit]):not(.second-form input), select, textarea {
+    border: 0;
+    margin: 1em;
+    padding: 1.5em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: transparent;
+    width: 80%;
+  }
+  
+  input[type=submit] {
+    margin: 4em;
+    padding: 1.5em;
+    border-radius: 5px;
+    background: #42adef;
+    width: 80%;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    border: 0
+  }

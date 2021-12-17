@@ -18,6 +18,6 @@ export function update(id, body) {
     return sendRequest(`${BASE_URL}/${id}`, 'PUT', body)
 }
 
-export function deleteProject(id) {
-    return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
+export function deleteProject(id, body) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE', body)
 }

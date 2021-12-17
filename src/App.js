@@ -13,7 +13,7 @@ function App() {
   const [owner, setOwner] = useState(getUser)
 
   return (
-    <div class='App'>
+    <div className='App'>
       <Navbar owner={owner} setOwner={setOwner} />
       <Routes>
         {

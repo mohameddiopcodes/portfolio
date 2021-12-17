@@ -10,6 +10,6 @@ async function login(req, res) {
         if(!match) throw new Error('Wrong Password')
         res.json(req.user)
     } catch(e) {
-        res.json({ message: e.message })
+        res.status(400).json({ message: e.message })
     }
 }

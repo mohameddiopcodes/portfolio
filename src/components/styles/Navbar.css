@@ -4,10 +4,11 @@ nav {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #F9F8FD;
+    background-color: #f9f8fd;
     position: relative;
     padding: 3%;
-    width: 200px
+    overflow: visible;
+    max-width: 110px;
 }
 
 nav div {
@@ -15,6 +16,7 @@ nav div {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
 nav div:not(.links) {
@@ -29,11 +31,11 @@ nav div a {
 
 nav button {
     padding: .5em 1em;
-    background: #F9F8FD;
-    border: 2px solid #555;
+    background: #333;
+    border: 2px solid #333;
+    color: #fefefe;
     border-radius: 5px;
 }
-
 
 .links a {
     box-sizing: content-box;
@@ -54,8 +56,7 @@ nav button {
     }
 
     nav button:hover {
-        background: #333;
-        border: 2px solid #333;
-        color: #fefefe
+        background: transparent;
+        color: #333
     }
 }
