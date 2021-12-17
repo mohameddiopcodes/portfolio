@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
-const sslRedirect = require('heroku-ssl-redirect');
+const redirectSSL = require('redirect-ssl')
 
 require('dotenv').config()
 require('./config/database')
@@ -13,7 +13,9 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
-app.use(sslRedirect());
+app.use(redirectSSL.create({
+  exclude: ['localhost']
+}));
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '../../build')));
 app.use(express.json({limit: '400mb'}));
