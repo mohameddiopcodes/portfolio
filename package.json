@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "server": "nodemon ./src/api/bin/www",
+    "server": "node ./src/api/bin/www",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
