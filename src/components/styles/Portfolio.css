@@ -281,7 +281,8 @@ button.delete-btn {
     /*About*/
     .About {
         width: 100vw;
-        margin: 5em 0;
+        margin: 0;
+        margin-top: 40vh;
         min-height: 80vh;
         align-items: center;
     }
@@ -335,7 +336,7 @@ button.delete-btn {
     .Project {
         width: 100vw;
         margin: 0;
-        margin-top: 5.5em;
+        margin-top: 40vh;
         /* min-height: 80vh; */
         display: flex;
         flex-direction: column;
@@ -371,7 +372,8 @@ button.delete-btn {
     /*Work*/
     .Work {
         width: 100vw;
-        margin: 5em 0;
+        margin: 0;
+        margin-top: 40vh;
         min-height: 80vh;
         display: flex;
         flex-direction: column;
