@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { create, index, update as updateProject, deleteProject } from '../../services/projects'
 import onDataChange from '../../services/utilities/onDataChange';
 
-import Nav from './Nav'
 import Select from 'react-select';
 
 const technologies = [
@@ -100,7 +99,7 @@ export default function Projects({ owner }) {
     return (
         <div className='Portfolio'>
             {error && <p>{error}</p>}
-            <Link className='arrow-left' to='/'>{'</'} previous page</Link>
+            <Link className='arrow-left' to='/'>{'</'} previous</Link>
             <div style={{overflow: 'visible'}}>
                 <h1>Projects</h1>
                 {projects && projects.totalPages >= 1 && !form && 
@@ -155,7 +154,7 @@ export default function Projects({ owner }) {
                         <button onClick={(e) => {
                             localStorage.setItem('page', page+1)
                             setPage(page+1)
-                        }} style={(projects.totalPages === page && {display: 'none'}) || {}}>next project {'/>'}</button>
+                        }} style={(projects.totalPages === page && {display: 'none'}) || (page === 1 && {marginLeft: '680px'}) || {}}>next project {'/>'}</button>
                     </div>
                 }
                 {   projects && projects.totalPages >= 1 && !form &&
@@ -174,7 +173,7 @@ export default function Projects({ owner }) {
                     </div>
                 }
             </div>
-            <Link className='arrow-right' to='/#work'>next page {'/>'}</Link>
+            <Link className='arrow-right' to='/#work'>next {'/>'}</Link>
         </div>
     )
 }
