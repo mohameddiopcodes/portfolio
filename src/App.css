@@ -6,7 +6,8 @@
 
 body, html {
   font-family: 'Nunito', sans-serif;
-  overflow: hidden
+  overflow: hidden;
+  background-color: #F9F8FD
 }
 
 button {
