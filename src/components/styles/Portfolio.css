@@ -1,31 +1,31 @@
-.Portfolio {
+/* .Portfolio {
     display: flex;
     flex-direction: column;
     /* overflow: visible; */
-    align-items: center;
+    /* align-items: center; */
     /* justify-content: flex-start;
     align-items: center;
     margin-top: 30vh;
     margin-left: 1vh;
     width: 100%;
-    min-height: 90vh; */
-}
+    height: 100%;
+} */
 
-.portfolio-nav {
+/* .portfolio-nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-right: 10em;
+    margin-right: 10em; */
     /* width: 80vw; */
     /* height: 4vh; */
-}
+/* } */
 
-.portfolio-nav a {
+/* .portfolio-nav a {
     display: block;
     margin: 0 .5em
-}
+} */
 
-.Portfolio a:not(.Project-actions a):not(.actions a):not(.portfolio-nav a) {
+/* .Portfolio a:not(.Project-actions a):not(.actions a):not(.portfolio-nav a) {
     font-size: 17px;
     display: block;
     text-decoration: none;
@@ -74,14 +74,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; */
     /* justify-content: center; */
-    margin: 2% 10% 0 0;
+    /* margin: 2% 10% 0 0;
     width: 50%;
     overflow: visible
-}
+} */
 
-.About h1 {
+/* .About h1 {
     font-size: 20px;
     overflow: visible;
 }
@@ -160,11 +160,12 @@ span.off {
     width: 800px;
     height: 450px;
     border-radius: 5px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 12px rgba(0, 0, 0, .3); */
     /* opacity: .8; */
-}
+/* } */
 
-.Project-actions a {
+/* } */
+/* .Project-actions a {
     display: inline-block;
     margin-right: 1.5em;
     text-decoration: none;
@@ -216,10 +217,9 @@ button.delete-btn {
     display: block;
     color: #333;
     border: 0;
-    padding: 0;
-}
+    padding: 0; */
 
-@media (hover: hover) {
+/* @media (hover: hover) {
     .actions button:hover {
         background: transparent;
         border: 1px solid #555;
@@ -245,24 +245,20 @@ button.delete-btn {
         text-decoration: underline;
         color: #BBB
     }
-}
+} */
 
-@media only screen and (max-width: 1300px) and (orientation: landscape) {
+/* @media only screen and (max-width: 1300px) and (orientation: landscape) {
     .technologies-title, .technologies {
         display: none;
     }
-}
+} */
 
-@media only screen and (max-width: 1300px) {
-    body {
-        overflow: scroll;
-    }
-
+/* @media only screen and (max-width: 1300px) {
     .Project img {
         object-fit: cover;
         width: 40vh;
         height: 40vh;
-    }
+    } */
     /* .About {
         flex-direction: column-reverse;
     }
@@ -275,39 +271,30 @@ button.delete-btn {
     .About > div {
         width: 100%;
     } */
-}
+/* } */
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
     .Portfolio {
         /* height: 100vh; */
-        margin: 0
-    }
-
-    .Portfolio h1:not(.About h1) {
-        margin: 0 auto;
-        width: fit-content;
-        text-align: center;
-        font-size: 1.2em;
-        color: #444;
-        padding-top: 1em;
-    }
+        /* margin: 0
+    } */
     /*About*/
-    .About {
+    /* .About {
         width: 100vw;
         margin: 0;
         margin-top: 1em;
         min-height: 80vh;
         align-items: center;
-    }
+    } */
 
-    .About div:not(.actions) {
+    /* .About div:not(.actions) {
         margin: 0 auto;
         text-align: center;
         width: 90vw
-    }
+    } */
 
-    .About h1 {
-        text-align: center;
+
+    /* .About h1 {
         margin-top: 0;
         width: 100%;
     }
@@ -344,20 +331,21 @@ button.delete-btn {
         padding: .8em 0;
         border-radius: 1%;
         display: block;
-    }
+    } */
 
     /*Projects*/
-    .Project {
-        /* width: 100vw; */
+
+    /* .Project {
+        width: 100vw;
         margin: 0;
-        margin-top: 1em;
+        margin-top: 5.5em; */
         /* min-height: 80vh; */
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
-    .Project h2 {
+    /* .Project h2 {
         margin: 0
     }
 
@@ -374,17 +362,17 @@ button.delete-btn {
         border-radius: 0;
         width: 50vh;
         height: 40vh
-    }
+    } */
 
-    .controls {
-        margin: 3em auto;
+    /* .controls {
+        margin: 3em auto; */
         /* font-size: .9em; */
         /* width: 100px; */
-        height: 2em
-    }
+        /* height: 2em
+    } */
 
     /*Work*/
-    .Work {
+    /* .Work {
         width: 100vw;
         margin: 0;
         margin-top: 1em;
@@ -392,9 +380,9 @@ button.delete-btn {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
-    .Work p {
+    /* .Work p {
         margin: auto 0;
     }
 
@@ -411,10 +399,10 @@ button.delete-btn {
     .technologies-title, .technologies {
         display: none;
     }
-}
+} */
 
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) { */
     /* .skills {
         display: none;
     } */
-}
+/* } */
