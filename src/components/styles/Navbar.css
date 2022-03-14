@@ -1,4 +1,4 @@
-nav {
+nav:not(.portfolio-nav) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +9,7 @@ nav {
     padding: 3%;
     overflow: visible;
     max-width: 110px;
+    z-index: 1000;
 }
 
 nav div {
@@ -21,7 +22,7 @@ nav div {
 
 nav div:not(.links) {
     position: absolute;
-    top: 2em
+    top: 1em
 }
 
 nav div a {
@@ -58,5 +59,21 @@ nav button {
     nav button:hover {
         background: transparent;
         color: #333
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    nav:not(.portfolio-nav) {
+        max-width: 100vw
+    }
+
+    nav:not(.portfolio-nav) div{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .nav-top {
+        display: none;
     }
 }

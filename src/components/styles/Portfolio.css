@@ -3,12 +3,29 @@
     flex-direction: column;
     overflow: visible;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30vh;
+    margin-left: 1vh;
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
-.Portfolio a:not(.Project-actions a):not(.actions a) {
+.portfolio-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 10em;
+    /* width: 80vw; */
+    /* height: 4vh; */
+}
+
+.portfolio-nav a {
+    display: block;
+    margin: 0 .5em
+}
+
+.Portfolio a:not(.Project-actions a):not(.actions a):not(.portfolio-nav a) {
     font-size: 17px;
     display: block;
     text-decoration: none;
@@ -16,35 +33,39 @@
     position: absolute;
 }
 
-.Portfolio > div{
+.Portfolio > div:not(.skills){
     text-align: left;
     width: 100%;
     height: 65%;
+    display: flex;
+    flex-direction: column;
 }
 
 .arrow-left {
     z-index: 1000;
-    bottom: 7%;
-    left: 0
+    bottom: 2%;
+    left: 0%
 }
 
 .arrow-right {
     z-index: 1000;
-    bottom: 7%;
+    bottom: 2%;
     right: 10%
 }
 
 .About {
-    margin-top: 8vh;
+    margin-top: 1vh;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     overflow: visible
 }
 
 .About > img {
-    border-radius: 50%;
+    border-radius: 2%;
     margin: 2%;
+    margin-left: 0;
     max-width: 300px;
     max-height: 300px
 }
@@ -54,7 +75,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    /* justify-content: center; */
     margin: 2% 10% 0 0;
     width: 50%;
     overflow: visible
@@ -65,8 +86,13 @@
     overflow: visible;
 }
 
+.About h1 span {
+    display: block;
+}
+
 .About p {
     overflow: visible;
+    max-width: 80vw;
     margin: 1% 0 5% 0;
 }
 
@@ -85,7 +111,7 @@
     margin-right: 1em;
     margin-bottom: 2em;
     border: 1px solid transparent;
-    padding: 1em;
+    padding: 1em 2em;
     overflow: visible
 }
 
@@ -99,7 +125,9 @@ span.off {
 }
 
 .skills {
-    overflow: visible
+    overflow: visible;
+    max-width: 80vw;
+    margin-bottom: 5em;
 }
 
 .skills img {
@@ -146,7 +174,7 @@ span.off {
 
 .controls {
     margin-top: 1em;
-    width: 800px;
+    max-width: 800px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -219,8 +247,19 @@ button.delete-btn {
     }
 }
 
-@media only screen and (max-width: 900px) {
-    .About {
+@media only screen and (max-width: 1300px) and (orientation: landscape) {
+    .technologies-title, .technologies {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .Project img {
+        object-fit: cover;
+        width: 40vh;
+        height: 40vh;
+    }
+    /* .About {
         flex-direction: column-reverse;
     }
 
@@ -230,6 +269,136 @@ button.delete-btn {
     }
 
     .About > div {
-        width: 100%
+        width: 100%;
+    } */
+}
+
+@media only screen and (max-width: 700px) {
+    .Portfolio {
+        height: 100vh;
+        margin: 0
     }
+    /*About*/
+    .About {
+        width: 100vw;
+        margin: 5em 0;
+        min-height: 80vh;
+        align-items: center;
+    }
+
+    .About div:not(.actions) {
+        margin: 0 auto;
+        text-align: center;
+        width: 90vw
+    }
+
+    .About h1 {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .About h1 span {
+        font-size: .8em;
+    }
+
+    .portfolio-nav {
+        display: none;
+    }
+
+    .About > img {
+        width: 60vw;
+        height: 60vw
+    }
+
+    .About p {
+        margin: 2.5em auto;
+    }
+
+    .actions {
+        margin: 0 auto;
+    }
+
+    .actions a {
+        text-decoration: dashed;
+    }
+
+    .actions a button {
+        font-size: .7em;
+        margin: .2em .2em;
+        width: 65px;
+        padding: .8em 0;
+        border-radius: 1%;
+        display: block;
+    }
+
+    /*Projects*/
+    .Project {
+        width: 100vw;
+        margin: 0;
+        margin-top: 5.5em;
+        /* min-height: 80vh; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Project h2 {
+        margin: 0
+    }
+
+    .Project p {
+        min-height: 80px;
+        max-width: 90vw;
+        font-size: .9em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .Project img {
+        border-radius: 0;
+        width: 50vh;
+        height: 40vh
+    }
+
+    .controls {
+        margin: 3em auto;
+        /* font-size: .9em; */
+        /* width: 100px; */
+        height: 2em
+    }
+
+    /*Work*/
+    .Work {
+        width: 100vw;
+        margin: 5em 0;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Work p {
+        margin: auto 0;
+    }
+
+
+    .arrow-left {
+        left: 10%;
+    }
+
+    .arrow-right-about {
+        left: auto;
+        right: auto;
+    }
+
+    .technologies-title, .technologies {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    /* .skills {
+        display: none;
+    } */
 }

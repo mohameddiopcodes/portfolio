@@ -13,9 +13,9 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
-app.use(redirectSSL.create({
-  exclude: ['localhost']
-}));
+// app.use(redirectSSL.create({
+//   exclude: ['localhost']
+// }));
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '../../build')));
 app.use(express.json({limit: '400mb'}));

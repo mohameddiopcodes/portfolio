@@ -5,8 +5,8 @@
 }
 
 body, html {
-    font-family: 'Nunito', sans-serif;
-    overflow: hidden
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden
 }
 
 button {
@@ -180,5 +180,18 @@ input[type=file]::-webkit-file-upload-button {
   input[type=file]::-webkit-file-upload-button:hover {
     background: transparent;
     color: #111
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    overflow: visible;
+    margin: 0
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .App {
+    flex-direction: column-reverse;
   }
 }
