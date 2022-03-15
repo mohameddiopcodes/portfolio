@@ -7,7 +7,8 @@
 body, html {
   font-family: 'Nunito', sans-serif;
   overflow: hidden;
-  background-color: #F9F8FD
+  background-color: #F9F8FD;
+  margin: 0
 }
 
 button {
@@ -194,6 +195,6 @@ input[type=file]::-webkit-file-upload-button {
 
 @media only screen and (max-width: 700px) {
   .App {
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
   }
 }
