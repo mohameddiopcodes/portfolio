@@ -49,7 +49,7 @@ export default function About() {
             <div id='main-card'>
                 <img id='main-img' src='/images/profile.PNG' />
                 <div id="main-card-content">
-                    <h1>Mohamed Diop <span>Full Stack Software Engineer</span></h1>
+                    <h1>Mohamed Diop<span> Full Stack Software Engineer</span></h1>
                     <div className='actions' >
                         <a href={resume} download="resume.pdf"><button>Resume</button></a>
                         <a href='https://www.linkedin.com/in/mohameddiopcodes/' target='_blank'><button>LinkedIn</button></a>
