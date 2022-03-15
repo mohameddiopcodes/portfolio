@@ -431,6 +431,15 @@ button.delete-btn {
     color: #444
 }
 
+.btn {
+    padding: 1em 0;
+    width: 170px;
+    border-radius: 3%;
+    border: 0;
+    color: white;
+    background: #000
+}
+
 .actions button {
     border: 0;
     background: #000;
