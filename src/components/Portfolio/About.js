@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import resume from '../../images/resume.pdf'
 
 import Nav from './Nav'
-import { useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 // export default function About() {
 //     const aboutPage = useRef()
@@ -36,7 +36,15 @@ import { useRef } from 'react';
 // }
 
 export default function About() {
+    const [loaded, setLoaded] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoaded(true)
+            }, 200)
+    }, [])
+
     return (
-        <h1>About</h1>
+        <img className={loaded ? 'visible':'hidden'} id='main-img' src='/images/profile.PNG' />
     )
 }

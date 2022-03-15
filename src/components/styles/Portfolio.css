@@ -406,3 +406,37 @@ button.delete-btn {
         display: none;
     } */
 /* } */
+
+#main-img {
+    position: relative;
+    border-radius: 2%;
+    box-shadow: -10px 2px 20px rgba(0, 0, 0, .2), 
+        -10px 2px 20px rgba(0, 0, 0, .1), 
+        10px 0 20px rgba(0, 0, 0, .2),
+        10px 0 20px rgba(0, 0, 0, .1);
+    transition: all 1s ease-in-out .1s;
+}
+
+.hidden {
+    right: -20%;
+    opacity: 0;
+}
+
+.visible {
+    right: 0;
+    opacity: 1
+}
+
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    #main-img {
+        width: 70vh;
+        height: 70vh
+    }
+}
+
+@media only screen and (max-width: 700px) and (orientation: portrait) {
+    #main-img {
+        width: 80vw;
+        height: 80vw
+    }
+}

@@ -6,7 +6,6 @@
 
 body, html {
   font-family: 'Nunito', sans-serif;
-  overflow: hidden;
   background-color: #F9F8FD;
   margin: 0
 }
@@ -15,6 +14,21 @@ button {
   cursor: pointer;
   overflow: visible;
   transition: all .2s ease-in-out;
+}
+
+.beforeApp {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  width: 8vmin;
+  height: 8vmin;
+  /* transform: scale(.05); */
 }
 
 .App {
