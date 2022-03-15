@@ -41,10 +41,24 @@ export default function About() {
     useEffect(() => {
         setTimeout(() => {
             setLoaded(true)
-            }, 500)
+            }, 250)
     }, [])
 
     return (
-        <img className={loaded ? 'visible':'hidden'} id='main-img' src='/images/profile.PNG' />
+        <div  className={loaded ? 'visible':'hidden'} id="About">
+            <div id='main-card'>
+                <img id='main-img' src='/images/profile.PNG' />
+                <div id="main-card-content">
+                    <h1>Mohamed Diop <span>Full Stack Software Engineer</span></h1>
+                    <div className='actions' >
+                        <a href={resume} download="resume.pdf"><button>Resume</button></a>
+                        <a href='https://www.linkedin.com/in/mohameddiopcodes/' target='_blank'><button>LinkedIn</button></a>
+                        <a href='https://github.com/mohameddiopcodes' target='_blank'><button>Github</button></a>
+                        <Link to='/#work'><button>Hire</button></Link>
+                    </div>
+                </div>
+            </div>
+            <p>Hey, sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        </div>
     )
 }
