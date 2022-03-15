@@ -59,7 +59,7 @@ export default function About() {
                 </div>
             </div>
             <p>Hey, sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-            <button class='btn'>View my projects →</button>
+            <Link to="/#projects"><button class='btn'>View my projects →</button></Link>
         </div>
     )
 }
