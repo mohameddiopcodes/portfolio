@@ -197,7 +197,7 @@ export default function Projects({owner, projects}) {
         <div  className={loaded ? 'visible':'hidden'} id="Projects">
         {
             projects.map((p) => (
-                <section style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
+                <section style={{padding: '0 8%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <div id='project-card'>
                         <img id='project-img' src={`data:image;base64, ${p.image[0]}`} />
                         <div id="project-card-content">
@@ -208,7 +208,12 @@ export default function Projects({owner, projects}) {
                             </div>
                         </div>
                     </div>
-                    <Link to="/#projects" style={{marginTop: '1.5em'}}><button class='btn'>View project →</button></Link>
+                    <div>
+                        <hr width="20%" style={{marginTop: '.1em'}}></hr>
+                        <p>{projects[1].description}</p>
+                        <hr width="20%" style={{marginBottom: '1em'}}></hr>
+                    </div>
+                    <Link to="/#projects"><button class='btn'>View project →</button></Link>
                 </section>
             ))
         }

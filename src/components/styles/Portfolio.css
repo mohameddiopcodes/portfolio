@@ -452,6 +452,11 @@ button.delete-btn {
     transition: all .7s ease-in-out .1s;
 }
 
+.btn:not(#About .btn) {
+    align-self: flex-end;
+    margin-bottom: 1.5em;
+}
+
 /* #Projects .actions {
     padding: 0 2em;
     display: flex;
@@ -485,7 +490,7 @@ button.delete-btn {
 #project-card {
     width: 690px;
     height: 400px;
-    margin-top: 2em
+    margin-bottom: 1.2em;
 }
 
 #project-card, #main-card {
@@ -520,6 +525,7 @@ button.delete-btn {
 #project-img, #main-img {
     border-radius: 1%;
     border: 1px solid rgba(198, 206, 206, 0.5);
+    border-bottom: 0;
     /* rgba(163, 195, 195, 0.5) */
     box-shadow: -10px 2px 20px rgba(0, 0, 0, .2), 
         -10px 2px 20px rgba(0, 0, 0, .1), 
@@ -569,9 +575,8 @@ button.delete-btn {
     }
 
     #Projects .actions button {
-        padding: .8em;
         margin: .4em;
-        width: 80px
+        width: 100px
     }
 }
 
@@ -584,9 +589,17 @@ button.delete-btn {
 
 @media only screen and (max-width: 700px) and (orientation: portrait) {
 
+    #Projects .actions {
+        display: none;
+    }
+
     #project-card {
-        width: 90vw;
-        height: 52vw;
+        object-fit: cover
+    }
+
+    #project-card {
+        width: 92vw;
+        height: 55vw
     }
 
     #main-card {
@@ -594,10 +607,27 @@ button.delete-btn {
         height: 92vw
     }
 
-    #project-card-content, #main-card-content {
+    #project-card-content {
         max-height: 100%;
-        padding-top: 0;
-        padding-bottom: .8em
+        padding-top: .5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1.5em;
+        font-size: .88em;
+    }
+
+    #Projects h1 {
+        font-size: 1.2em
+    }
+
+    #Projects p {
+        font-size: .85em
+    }
+
+    #main-card-content {
+        max-height: 50px;
+        padding-top: .25em;
+        padding-bottom: .5em
     }
 
     #Projects h1, #About h1 {
@@ -613,6 +643,12 @@ button.delete-btn {
         width: 80vw;
         font-size: .9em
     }
+
+    .btn:not(#About .btn) {
+        width: 140px;
+        font-size: .8em;
+        margin-bottom: 3em;
+    }
 }
 
 @media only screen and (max-width: 400px) and (orientation: portrait) {
@@ -622,11 +658,6 @@ button.delete-btn {
         padding: .8em 0;
         font-size: .8em;
         width: 60px;
-    }
-
-    .btn {
-        width: 110px;
-        font-size: .8em;
     }
 }
 
