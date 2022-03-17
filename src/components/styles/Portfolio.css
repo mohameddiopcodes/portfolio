@@ -410,14 +410,23 @@ button.delete-btn {
 #About {
     height: 100%;
     position: relative;
-    transition-duration: 1s;
+    transition-duration: .8s;
     transition-property: opacity, right;
     transition-timing-function: cubic-bezier(.4,0,.49,1);
 }
 
-#About h1 {
+#Projects {
+    height: 100%;
+    position: relative;
+    transition-duration: .8s;
+    transition-property: opacity, right;
+    transition-timing-function: cubic-bezier(.4,0,.49,1);
+}
+
+#About h1, #Projects h1 {
     font-size: 1.5em;
     margin: .5em 0;
+    color: #111
 }
 
 #About p {
@@ -428,13 +437,14 @@ button.delete-btn {
 
 #About h1 span {
     font-size: .6em;
-    color: #444
+    color: #333
 }
 
 .btn {
     padding: 1em 0;
     width: 170px;
     border-radius: 5%;
+    opacity: .8;
     border: 0;
     color: white;
     background: #000;
@@ -442,52 +452,81 @@ button.delete-btn {
     transition: all .7s ease-in-out .1s;
 }
 
-.actions button {
+/* #Projects .actions {
+    padding: 0 2em;
+    display: flex;
+    justify-content: flex-end;
+} */
+
+#About .actions button {
+    width: 70px;
+}
+
+#Projects .actions button {
+    width: 120px;
+}
+
+#Projects .actions button, #About .actions button {
     border: 0;
     background: #000;
     opacity: .8;
     color: #FFF;
     padding: 1em 0;
-    width: 70px;
     margin: 0 .3em;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     border-radius: 8%;
 }
 
 #main-card {
-    position: relative;
     width: 400px;
     height: 400px;
-    box-sizing: border-box;
-    border-top: 1px solid #FFF;
-    border-left: 1px solid #FFF;
-    border-right: 1px solid #FFF;
 }
 
-#main-card-content {
+#project-card {
+    width: 690px;
+    height: 400px;
+    margin-top: 2em
+}
+
+#project-card, #main-card {
+    position: relative;
+    box-sizing: border-box;
+}
+
+#project-card-content, #main-card-content {
     bottom: 0;
     width: 100%;
     padding: 1em 0;
     position: absolute;
-    background: rgba(255,255,255, .5);
-    border-bottom-left-radius: 2%;
-    border-bottom-right-radius: 2%;
-    box-shadow: -10px 2px 20px rgba(0, 0, 0, .2);
+    background: rgba(198, 206, 206, 0.5);
+    border-bottom: 1px solid #FFF;
     border-right: #FFF;
     border-bottom: #FFF;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
     z-index: 1;
 }
 
 #main-img {
-    border-radius: 2%;
-    box-shadow: -10px 2px 20px rgba(0, 0, 0, .2), 
-        -10px 2px 20px rgba(0, 0, 0, .1), 
-        10px 0 20px rgba(0, 0, 0, .2),
-        10px 0 20px rgba(0, 0, 0, .1);
-    position: absolute;
-    z-index: 0;
     width: 100%;
     height: 100%;
+}
+
+#project-img {
+    width: 100%;
+    height: 100%;
+}
+
+#project-img, #main-img {
+    border-radius: 1%;
+    border: 1px solid rgba(198, 206, 206, 0.5);
+    /* rgba(163, 195, 195, 0.5) */
+    box-shadow: -10px 2px 20px rgba(0, 0, 0, .2), 
+        -10px 2px 20px rgba(0, 0, 0, .1), 
+        10px 2px 20px rgba(0, 0, 0, .2),
+        10px 2px 20px rgba(0, 0, 0, .1);
+    position: absolute;
+    z-index: 0;
     top: 0;
     left: 0
 }
@@ -503,7 +542,7 @@ button.delete-btn {
 }
 
 @media (hover: hover) {
-    .actions button:hover {
+    #About .actions button:hover {
         box-shadow: 5px 5px 8px rgba(0, 0, 0, .3);
         color: #EAEAEA;
         opacity: 1;
@@ -511,14 +550,28 @@ button.delete-btn {
 
     .btn:hover {
         box-shadow: 7px -3px 10px rgba(0, 0, 0, .3);
-        margin-left: 2em
+        opacity: 1;
+        transform: translateX(2em)
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    #project-card {
+        width: 650px;
+        height: 390px;
     }
 }
 
 @media only screen and (max-width: 900px) {
-    .actions button {
+    #About .actions button {
         margin: .2em;
         width: 70px
+    }
+
+    #Projects .actions button {
+        padding: .8em;
+        margin: .4em;
+        width: 80px
     }
 }
 
@@ -530,18 +583,24 @@ button.delete-btn {
 }
 
 @media only screen and (max-width: 700px) and (orientation: portrait) {
+
+    #project-card {
+        width: 90vw;
+        height: 52vw;
+    }
+
     #main-card {
         width: 92vw;
         height: 92vw
     }
 
-    #main-card-content {
+    #project-card-content, #main-card-content {
         max-height: 100%;
         padding-top: 0;
-        padding-bottom: 1.5em
+        padding-bottom: .8em
     }
 
-    #About h1 {
+    #Projects h1, #About h1 {
         margin-bottom: 0.2em
     }
 
@@ -557,24 +616,30 @@ button.delete-btn {
 }
 
 @media only screen and (max-width: 400px) and (orientation: portrait) {
-    .actions button {
+    
+    #Projects .actions button, #About .actions button {
         margin: .2em;
         padding: .8em 0;
         font-size: .8em;
         width: 60px;
     }
+
+    .btn {
+        width: 110px;
+        font-size: .8em;
+    }
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    #main-card-content {
+    #project-card-content, #main-card-content {
       -webkit-backdrop-filter: blur(5em);
       backdrop-filter: blur(5em);
     }
 
-    @media (hover: hover) {
-        #main-card-content:hover {
+    /* @media (hover: hover) {
+        #project-card-content:hover, #main-card-content:hover {
             -webkit-backdrop-filter: blur(1em);
             backdrop-filter: blur(1em);
           }
-    }
-  }
+    } */
+}

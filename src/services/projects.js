@@ -6,8 +6,8 @@ export function create(body) {
     return sendRequest(BASE_URL, 'POST', body)
 }
 
-export function index(query = '') {
-    return sendRequest(BASE_URL + query)
+export function index() {
+    return sendRequest(BASE_URL)
 }
 
 export function show(id) {

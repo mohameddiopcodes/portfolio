@@ -12,7 +12,7 @@ async function create(req, res) {
     try {
         delete req.body.email
         const project = await Project.create(req.body)
-        res.json({project, totalPages: await Project.countDocuments({})})
+        res.json({project, totalPages: await Project.countDocuments({})}).status(200)
     } catch(e) {
         res.json({ message: e.message })
     }
@@ -20,9 +20,8 @@ async function create(req, res) {
 
 async function index(req, res) {
     try {
-        const { page = 1 } = req.query
-        const projects = await Project.find({}).sort({ createdAt: -1 }).limit(1).skip((page - 1))
-        res.json({project: projects[0], totalPages: await Project.countDocuments({})})
+        const projects = await Project.find({}).sort({ createdAt: -1 }).limit(9)
+        res.json({projects: projects})
     } catch(e) {
         res.json({ message: e.message })
     }

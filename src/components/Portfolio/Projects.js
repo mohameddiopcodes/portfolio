@@ -178,8 +178,40 @@ import Select from 'react-select';
 //     )
 // }
 
-export default function Projects() {
+{/* <hr width="20%" style={{marginTop: '2em'}}></hr>
+<p>{projects[1].description}</p>
+<hr width="20%" style={{marginBottom: '2em'}}></hr>
+<Link to="/#projects"><button class='btn'>View my projects →</button></Link> */}
+
+export default function Projects({owner, projects}) {
+    const [loaded, setLoaded] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoaded(true)
+            }, 150)
+        console.log(projects[1])
+        }, [])
+        
     return (
-        <h1>Projects</h1>
+        <div  className={loaded ? 'visible':'hidden'} id="Projects">
+        {
+            projects.map((p) => (
+                <section style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
+                    <div id='project-card'>
+                        <img id='project-img' src={`data:image;base64, ${p.image[0]}`} />
+                        <div id="project-card-content">
+                            <h1>{p.name}</h1>
+                            <div className='actions' >
+                                <a href={p.github} target='_blank'><button>Code</button></a>
+                                <a href={p.link} target='_blank'><button>Website</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <Link to="/#projects" style={{marginTop: '1.5em'}}><button class='btn'>View project →</button></Link>
+                </section>
+            ))
+        }
+    </div>
     )
 }

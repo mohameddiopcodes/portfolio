@@ -41,7 +41,7 @@ export default function About() {
     useEffect(() => {
         setTimeout(() => {
             setLoaded(true)
-            }, 250)
+            }, 150)
     }, [])
 
     return (
