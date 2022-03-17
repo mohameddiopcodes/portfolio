@@ -185,13 +185,19 @@ import Select from 'react-select';
 
 export default function Projects({owner, projects}) {
     const [loaded, setLoaded] = useState(false)
+    const [seeMore, setSeeMore] = useState(false)
 
     useEffect(() => {
         setTimeout(() => {
             setLoaded(true)
-            }, 150)
+        }, 150)
         console.log(projects[1])
-        }, [])
+    }, [])
+
+    function toggleSeeMore() {
+        setSeeMore(!seeMore)
+    }
+    
         
     return (
         <div  className={loaded ? 'visible':'hidden'} id="Projects">
@@ -210,10 +216,14 @@ export default function Projects({owner, projects}) {
                     </div>
                     <div>
                         <hr width="20%" style={{marginTop: '.1em'}}></hr>
-                        <p>{projects[1].description}</p>
-                        <hr width="20%" style={{marginBottom: '1em'}}></hr>
+                        {!seeMore && <button onClick={toggleSeeMore} class='see-more'>see more</button>}
+                        <div style={!seeMore ? {position: 'absolute'}:{}} className={seeMore ? 'visible': 'hidden-two'}>
+                            <p>{p.description}</p>
+                            <Link to="/#projects"><button class='btn'>View project →</button></Link>
+                            <button onClick={toggleSeeMore} class='see-more'>see less</button>
+                            <hr width="20%" style={{marginBottom: '1em'}}></hr>
+                        </div>
                     </div>
-                    <Link to="/#projects"><button class='btn'>View project →</button></Link>
                 </section>
             ))
         }

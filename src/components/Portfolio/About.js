@@ -37,12 +37,17 @@ import { useEffect, useState } from 'react';
 
 export default function About() {
     const [loaded, setLoaded] = useState(false)
+    const [seeMore, setSeeMore] = useState(false)
 
     useEffect(() => {
         setTimeout(() => {
             setLoaded(true)
             }, 150)
     }, [])
+
+    function toggleSeeMore() {
+        setSeeMore(!seeMore)
+    }
 
     return (
         <div  className={loaded ? 'visible':'hidden'} id="About">
@@ -59,9 +64,13 @@ export default function About() {
                 </div>
             </div>
             <hr width="20%" style={{marginTop: '1em'}}></hr>
+            {!seeMore && <button onClick={toggleSeeMore} class='see-more'>see more</button>}
+            <div style={!seeMore ? {position: 'absolute'}:{}} className={seeMore ? 'visible': 'hidden-two'}>
                 <p>Hey, sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-            <hr width="20%" style={{marginBottom: '1em'}}></hr>
-            <Link to="/#projects"><button class='btn'>View my projects →</button></Link>
+                <hr width="20%" style={{marginBottom: '1em'}}></hr>
+                <button onClick={toggleSeeMore} class='see-more'>see less</button>
+                <Link to="/#projects"><button class='btn'>View my projects →</button></Link>
+            </div>
         </div>
     )
 }
