@@ -2,8 +2,8 @@ import '../styles/Portfolio.css'
 import { Link } from "react-router-dom";
 import resume from '../../images/resume.pdf'
 
-import Nav from './Nav'
 import { useEffect, useState } from 'react';
+import Nav from './Nav'
 
 // export default function About() {
 //     const aboutPage = useRef()

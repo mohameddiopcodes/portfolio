@@ -185,17 +185,16 @@ import Select from 'react-select';
 
 export default function Projects({owner, projects}) {
     const [loaded, setLoaded] = useState(false)
-    const [seeMore, setSeeMore] = useState(false)
+    const [selected, setSelected] = useState(null)
 
     useEffect(() => {
         setTimeout(() => {
             setLoaded(true)
         }, 150)
-        console.log(projects[1])
     }, [])
 
-    function toggleSeeMore() {
-        setSeeMore(!seeMore)
+    function toggleSeeMore(id) {
+        setSelected(id)
     }
     
         
@@ -216,12 +215,12 @@ export default function Projects({owner, projects}) {
                     </div>
                     <div>
                         <hr width="20%" style={{marginTop: '.1em'}}></hr>
-                        {!seeMore && <button onClick={toggleSeeMore} class='see-more'>see more</button>}
-                        <div style={!seeMore ? {position: 'absolute'}:{}} className={seeMore ? 'visible': 'hidden-two'}>
-                            <p>{p.description}</p>
-                            <Link to="/#projects"><button class='btn'>View project →</button></Link>
-                            <button onClick={toggleSeeMore} class='see-more'>see less</button>
+                        {selected !== p._id && <button onClick={() => toggleSeeMore(p._id)} class='see-more'>see more</button>}
+                        <div style={selected !== p._id ? {position: 'absolute'}:{}} className={selected === p._id ? 'visible': 'hidden-two'}>
+                                <p>{p.description}</p>
                             <hr width="20%" style={{marginBottom: '1em'}}></hr>
+                            <button onClick={toggleSeeMore} class='see-more'>see less</button>
+                            <Link to="/#projects"><button class='btn'>View project →</button></Link>
                         </div>
                     </div>
                 </section>

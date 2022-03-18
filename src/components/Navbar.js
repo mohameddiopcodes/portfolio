@@ -33,7 +33,7 @@ export default function Navbar({ owner, setOwner }) {
             <div className='nav-links'>
                 <NavLink draggable={false} style={ location.hash === '' ? active : {} } to='/'>About</NavLink>
                 <NavLink draggable={false} style={ location.hash === '#projects' ? active : {} } to='/#projects'>Projects</NavLink>
-                <NavLink draggable={false} style={ location.hash === '#work' ? active : {} } to='/#work'>Work</NavLink>
+                <NavLink draggable={false} style={ location.hash === '#work' ? active : {} } to='/#work'>Connect</NavLink>
             </div>
         </nav>
     )

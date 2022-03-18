@@ -416,7 +416,7 @@ button.delete-btn {
 }
 
 #Projects {
-    height: 100%;
+    height: fit-content;
     position: relative;
     transition-duration: .8s;
     transition-property: opacity, right;
@@ -480,6 +480,15 @@ button.delete-btn {
     margin: 0 .3em;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     border-radius: 8%;
+}
+
+#Work {
+    background: #252525;
+    border-radius: .5%;
+    position: relative;
+    transition-duration: .8s;
+    transition-property: opacity, right;
+    transition-timing-function: cubic-bezier(.4,0,.49,1);
 }
 
 #main-card {
@@ -688,7 +697,7 @@ button.delete-btn {
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    #project-card-content, #main-card-content {
+    #Work, #project-card-content, #main-card-content {
       -webkit-backdrop-filter: blur(5em);
       backdrop-filter: blur(5em);
     }
