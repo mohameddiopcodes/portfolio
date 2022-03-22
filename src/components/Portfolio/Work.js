@@ -2,7 +2,7 @@ import '../styles/Portfolio.css'
 import { Link } from "react-router-dom";
 import { Canvas, useFrame } from 'react-three-fiber';
 import { Stars } from '@react-three/drei';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Html } from '@react-three/drei';
 import Nav from './Nav'
 import { useEffect, useRef, useState } from 'react';
 
@@ -43,6 +43,7 @@ function Sphere(props) {
 export default function Work() {
     const [loaded, setLoaded] = useState(false)
     const [seeMore, setSeeMore] = useState(false)
+    const text = useRef()
 
     useEffect(() => {
         setTimeout(() => {
@@ -54,13 +55,35 @@ export default function Work() {
         setSeeMore(!seeMore)
     }
 
+    function addPlanet() {
+      const [x,y,z] = Array(3).fill().map(() => Math.random() * 100)
+    
+      return (
+        <Sphere position={[x, y, z]} />
+      )
+    }
+
     return (
-        <Canvas camera={{ fov: 75, position: [0, 0, 5]}} className={loaded ? 'visible':'hidden'} id="Work">
+        <Canvas camera={{ fov: 75, position: [0, 0, 0]}} className={loaded ? 'visible':'hidden'} id="Work">
             <Stars/>
             <OrbitControls/>
             <ambientLight />
             <pointLight color="#FFF" position={[10, 10, 10]} />
-            <Sphere position={[0, 0, 0]} />
+            {addPlanet}
+            <Html position={[0, 0, 0]}>
+              <form style={{filter: 'invert(100%)'}} className='second-form'>
+                <h4>Feel free to Scroll around ➙</h4>
+                <label htmlFor='name'><h4>NAME</h4></label>
+                <input name='name' type='text'></input>
+                <label htmlFor='email'><h4>EMAIL</h4></label>
+                <input name='email' type='text'></input>
+                <label htmlFor='number'><h4>PHONE NUMBER</h4></label>
+                <input name='number' type='number'></input>
+                <label htmlFor='description'><h4>MESSAGE</h4></label>
+                <input name='name' type='text'></input>
+                <input type='submit'></input>
+              </form>
+            </Html>
         </Canvas>
     )
 }

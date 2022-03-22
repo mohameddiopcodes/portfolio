@@ -98,14 +98,14 @@ input:-webkit-autofill:active  {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./images/colors.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 0;
-  max-width: 900px;
-  min-height: 90%;
-  max-height: 92%
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: rotate(4);
 }
 
 .second-form h4 {
@@ -117,8 +117,8 @@ input:-webkit-autofill:active  {
 .second-form input:not(input[type=submit]):not(input[type=file]), textarea {
   padding: 1%;
   background: transparent;
-  border: 1px solid #555;
-  border-radius: 5px;
+
+  /* border-bottom: 1px solid #555; */
   width: 80%;
   margin-bottom: 1%;
   overflow: scroll;
@@ -131,9 +131,9 @@ input:-webkit-autofill:active  {
 }
 
 .second-form input[type=submit] {
-  margin: 1% 0;
+  margin: 2em 0;
   width: fit-content;
-  padding: 1.5% 2em;
+  padding: 1em 2em;
   align-self: flex-start;
   margin-left: 10%;
   border: 1px solid #111;
