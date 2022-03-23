@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Nunito:wght@300;400;600&display=swap');
-
+select,   textarea,   input[type="text"],   input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] { 
+  font-size: 1em; 
+  border-radius: 0;
+}
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body, html {
