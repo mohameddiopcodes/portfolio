@@ -121,7 +121,7 @@ export default function Work() {
           <h3 style={{marginTop: '10vh'}}>Hey, let's connect.</h3>
           <p>I'd be glad to have a discussion with you about what we we can create together!</p>
           {/* <label htmlFor='name'><h4>Name</h4></label> */}
-          <input onChange={handleOnChange} value={formData.name} placeholder='Please enter your name' name='name' type='text' autoComplete="off" autoFocus required></input>
+          <input onChange={handleOnChange} value={formData.name} placeholder='Please enter your name' name='name' type='text' autoComplete="off" required></input>
           {/* <label htmlFor='email'><h4>Email</h4></label> */}
           <input onChange={handleOnChange} value={formData.email} placeholder='Email' name='email' type='text' autoComplete="off" required></input>
           {/* <label htmlFor='number'><h4>Phone number</h4></label> */}
