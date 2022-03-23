@@ -11,6 +11,7 @@ select,   textarea,   input[type="text"],   input[type="password"], input[type="
 body, html {
   font-family: 'Nunito', sans-serif;
   background-color: #F9F8FD;
+  min-height: 100vh;
   margin: 0;
 }
 
