@@ -92,45 +92,71 @@ input:-webkit-autofill:active  {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0,  .2) inset;
 }
 
-.second-form {
+.error {
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #eb4848;
+  top: 2em;
+  z-index: 0;
+  padding: 1em 0;
+  color: #FFF !important;
+  transition-property: opacity, transform;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+}
+
+.error-hidden {
+  opacity: 0;
+  transform: translateX(1em)
+}
+
+.error-visible {
+  opacity: 1;
+  transform: translateX(0)
+}
+/* .contact-form {
   overflow: visible;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background: rgba(198, 206, 206, 0.5);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 0;
-  position: absolute;
+  top: 0;
   width: 100vw;
   height: 100vh;
   transform: rotate(4);
-}
-
-.second-form h4 {
+} */
+/* 
+.contact-form h4 {
   width: 80%;
-  /* margin: 5%; */
+  margin: 5%;
   text-align: left
 }
 
-.second-form input:not(input[type=submit]):not(input[type=file]), textarea {
+.contact-form input:not(input[type=submit]):not(input[type=file]), textarea {
   padding: 1%;
   background: transparent;
 
-  /* border-bottom: 1px solid #555; */
+  border-bottom: 1px solid #555;
   width: 80%;
   margin-bottom: 1%;
   overflow: scroll;
   min-height: 50px
 }
 
-.second-form input[type=file] {
+.contact-form input[type=file] {
   padding: 1%;
   margin: 2%;
 }
 
-.second-form input[type=submit] {
+.contact-form input[type=submit] {
   margin: 2em 0;
   width: fit-content;
   padding: 1em 2em;
@@ -141,17 +167,17 @@ input:-webkit-autofill:active  {
   color: #fefefe
 }
 
-.second-form input:not(input[type=file]):focus, select:focus, textarea:focus {
+.contact-form input:not(input[type=file]):focus, select:focus, textarea:focus {
   outline: 1px solid blue;
 }
 
-.second-form label {
+.contact-form label {
   width: 80%;
   text-align: left;
   color: #333
 }
 
-.second-form button {
+.contact-form button {
   border: 0;
   text-decoration: underline;
   background: transparent;
@@ -159,7 +185,7 @@ input:-webkit-autofill:active  {
   color: #111;
   margin: 2% 0;
   width: 80%;
-}
+} */
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #111;

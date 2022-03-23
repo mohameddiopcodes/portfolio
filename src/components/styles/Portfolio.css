@@ -483,7 +483,7 @@ button.delete-btn {
 }
 
 #Work {
-    background: #252525;
+    background: #111;
     /* border-radius: .5%; */
     position: relative;
     transition-duration: .8s;
@@ -570,6 +570,95 @@ button.delete-btn {
     opacity: 1
 }
 
+.contact-form {
+    /* overflow: visible; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
+    /* align-items: flex-start; */
+    background: rgba(198, 206, 206, 0.5);
+    transition: opacity .3s ease-in-out;
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    margin: 0;
+    top: 0;
+    width: 100vw;
+    max-width: 1300px;
+    height: 100vh;
+    /* transform: rotate(4); */
+}
+
+.contact-form input:not(input[type=submit]), .contact-form textarea {
+    border: 0;
+    /* border-radius: 15px; */
+    color: rgba(255, 255, 255, .7);
+    background: transparent;
+    border-bottom: 1px dashed #FEFEFE;
+    margin: 1em auto;
+    width: 80%;
+    padding: 1em
+}
+
+.contact-form input:not(input[type=submit]):focus, .contact-form textarea:focus {
+    outline: none;
+    border-bottom: 3px dashed #FEFEFE;
+}
+
+.contact-form h3 {
+    color: #222222;
+    margin: 0
+}
+.contact-form p {
+    width: 80%;
+    margin: 0 auto 1em auto;
+    color: #252525;
+    font-size: .8em;
+}
+
+.contact-form label {
+    width: 80%;
+    text-align: left;
+}
+
+.contact-form label h4 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form input[type='submit'] {
+    border: 0;
+    border-radius: 2px;
+    padding: 1.3em;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2),
+    -2px -1px 10px rgba(0, 0, 0, .1);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, 1));
+    color: #dcdcdc;
+    border-radius: 2%;
+    margin: 1em auto;
+    width: 80%;
+}
+
+.contact-form input[type='submit']:hover {
+    /* color: #111; */
+    background: #000;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, .4),
+    -2px -3px 15px rgba(0, 0, 0, .3);
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: rgba(255, 255, 255, .7);
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, .7);
+  }
+  
+  ::placeholder {
+    color: rgba(255, 255, 255, .7);
+  }
+
 @media (hover: hover) {
     #About .actions button:hover {
         box-shadow: 5px 5px 8px rgba(0, 0, 0, .3);
@@ -589,10 +678,19 @@ button.delete-btn {
     }
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (min-width: 1050px) {
     #project-card {
         width: 650px;
         height: 390px;
+    }
+
+    .contact-form {
+        top: 8vh;
+        width: 40vw;
+        height: 70vh;
+        min-width: 700px;
+        max-width: 900px;
+        border-radius: 15px
     }
 }
 
@@ -697,7 +795,7 @@ button.delete-btn {
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    #Work, #project-card-content, #main-card-content {
+    .contact-form, #Work, #project-card-content, #main-card-content {
       -webkit-backdrop-filter: blur(5em);
       backdrop-filter: blur(5em);
     }

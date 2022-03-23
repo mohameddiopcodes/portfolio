@@ -80,6 +80,7 @@ nav button {
 } */
 
 nav {
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
