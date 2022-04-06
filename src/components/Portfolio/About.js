@@ -52,7 +52,7 @@ export default function About() {
     return (
         <div  className={loaded ? 'visible':'hidden'} id="About">
             <div id='main-card'>
-                <img id='main-img' src='/images/profile.jpg' />
+                <img id='main-img' src='/images/profile.PNG' />
                 <div id="main-card-content">
                     <h1>Mohamed Diop<span> Full Stack Software Engineer</span></h1>
                     <div className='actions' >
